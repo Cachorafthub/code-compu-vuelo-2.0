@@ -11,19 +11,14 @@
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_BMP085.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#define I2C_SDA 8
+#define I2C_SCL 9
+TwoWire I2CBME = TwoWire(0);
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+I2CBME.begin(I2C_SDA, I2C_SCL, 100000);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
 }
