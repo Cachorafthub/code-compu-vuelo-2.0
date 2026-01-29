@@ -10,13 +10,15 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_BMP085.h>
-
-#define I2C_SDA 8
-#define I2C_SCL 9
-TwoWire I2CBME = TwoWire(0);
-
+#include <commands.h>
+using namespace N;
 void setup() {
-I2CBME.begin(I2C_SDA, I2C_SCL, 100000);
+    Serial.print("Inicializando computadora");
+    for (int i = 0; i < 4; i++) {
+        Serial.println(".");
+        delay(500);
+    }
+
 }
 
 void loop() {
