@@ -13,14 +13,17 @@
 #include "Wire.h"
 using namespace N;
 void setup() {
+    Serial.begin(115200);
     Serial.print("Inicializando computadora");
     for (int i = 0; i < 4; i++) {
         Serial.println(".");
         delay(500);
     }
+    Serial.print("Codigo: ");
+    Serial.println(command.code);
+    comandos();
 
 }
 
 void loop() {
-
 }

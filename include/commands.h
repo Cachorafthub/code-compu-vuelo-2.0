@@ -8,9 +8,10 @@
 using namespace std;
 namespace N {
     struct{
-        int code;
+        int code = 0000;
         int counter;
         string text;
     }command;
+    void comandos();
 }
 #endif //CODE_COMPU_VUELO_2_0_COMMANDS_H
