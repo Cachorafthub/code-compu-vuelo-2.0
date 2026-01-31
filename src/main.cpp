@@ -21,10 +21,10 @@ void setup() {
     }
     Serial.print("Codigo: ");
     Serial.println(command.code);
-    comandos();
+    //todo checar lo de los voids en archivos externos para que funcionen en el main
 
 }
 
 void loop() {
-    //probando a
+    //todo meter los futuros void de los archivos con cada función
 }
