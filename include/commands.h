@@ -13,6 +13,6 @@ namespace N {
         string text;
     }command;
     void comandos();
-    //todo pues la neta nada aqui
+    //todo capaz implementar clases para verme bien mamador
 }
 #endif //CODE_COMPU_VUELO_2_0_COMMANDS_H
