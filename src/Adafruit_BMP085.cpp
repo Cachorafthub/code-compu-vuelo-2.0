@@ -28,7 +28,7 @@
  * BSD license, all text above must be included in any redistribution
  */
 
-#include "Adafruit_BMP085.h"
+#include "../include/Adafruit_BMP085.h"
 #include <Adafruit_I2CDevice.h>
 
 Adafruit_BMP085::Adafruit_BMP085() { i2c_dev = nullptr; }

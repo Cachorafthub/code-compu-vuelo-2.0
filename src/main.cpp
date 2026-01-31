@@ -1,16 +1,16 @@
 //declaración de librerias
-#include <Arduino.h>
-#include "I2Cdev.h"
-#include "MPU6050.h"
-#include "Wire.h"
-#include "FS.h"
-#include "SD.h"
-#include <SPI.h>
-#include <TinyGPSPlus.h>
+#include <../include/Adafruit_BMP085.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-#include <Adafruit_BMP085.h>
-#include <commands.h>
+#include <Arduino.h>
+#include <../include/commands.h>
+#include <SPI.h>
+#include <../include/TinyGPSPlus.h>
+#include "FS.h"
+#include "../include/I2Cdev.h"
+#include "../include/MPU6050.h"
+#include "SD.h"
+#include "Wire.h"
 using namespace N;
 void setup() {
     Serial.print("Inicializando computadora");

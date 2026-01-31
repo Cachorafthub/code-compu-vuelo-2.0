@@ -34,7 +34,7 @@ THE SOFTWARE.
 ===============================================
 */
 
-#include "MPU6050.h"
+#include "../include/MPU6050.h"
 #include <string.h>
 
 #define I2C_NUM I2C_NUM_0
