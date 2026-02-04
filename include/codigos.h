@@ -7,12 +7,15 @@
 #include <string>
 using namespace std;
 namespace N {
-    struct{
-        int code = 0000;
-        int counter;
-        string text;
-    }command;
-    void comandos();
+    class codigos {
+        public:
+            codigos();
+            int code = 0000;
+            int counter;
+            string text;
+            void comandos();
+    };
+
     //todo capaz implementar clases para verme bien mamador
 }
 #endif //CODE_COMPU_VUELO_2_0_COMMANDS_H
