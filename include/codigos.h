@@ -9,10 +9,12 @@ using namespace std;
 namespace N {
     class codigos {
         public:
-            codigos();
+        codigos();
+        struct {
             int code = 0000;
             int counter;
             string text;
+        } comando;
             void comandos();
     };
 

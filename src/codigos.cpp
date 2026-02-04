@@ -11,14 +11,14 @@ using namespace std;
 codigos::codigos() {
 };
     void codigos::comandos() {
-        Serial.println(code);
-        if (code == 0000) {
-            counter = 1;
+        Serial.println(comando.code);
+        if (comando.code == 0000) {
+            comando.counter = 1;
         }
-        switch (counter) {
+        switch (comando.counter) {
             case 1:
-                text = "Idling";
-                Serial.print(text.data());
+                comando.text = "Idling";
+                Serial.print(comando.text.data());
                 for (int i = 0; i < 3; i++) {
                     Serial.println(".");
                 }
