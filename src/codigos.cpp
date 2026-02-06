@@ -7,14 +7,15 @@
 #include <string>
 using namespace N;
 using namespace std;
+codigos::codigos() {};
 
-codigos::codigos() {
-};
-    void codigos::comandos() {
+void codigos::comandos() {
         Serial.println(comando.code);
         if (comando.code == 0000) {
             comando.counter = 1;
         }
+
+
         switch (comando.counter) {
             case 1:
                 comando.text = "Idling";
@@ -35,4 +36,8 @@ codigos::codigos() {
                 }
         }
         //todo meter todos los casos y codigos posibles
-    }
+}
+
+void codigos::girosvariable() {
+    gyro.ax;
+}

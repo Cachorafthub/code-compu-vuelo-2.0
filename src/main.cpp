@@ -12,7 +12,9 @@
 #include "SD.h"
 #include "Wire.h"
 using namespace N;
-codigos comando;
+codigos comunicacion;
+MPU6050 mpu;
+
 void setup() {
     Serial.begin(115200);
     Serial.print("Inicializando computadora");
@@ -21,12 +23,12 @@ void setup() {
         delay(500);
     }
     Serial.print("Codigo: ");
-    //todo checar lo de los voids en archivos externos para que funcionen en el main
+
 
 }
 
 void loop() {
-    comando.comandos();
-
+    comunicacion.comandos();
+    comunicacion.Ax = 10;
     //todo meter los futuros void de los archivos con cada función
 }
