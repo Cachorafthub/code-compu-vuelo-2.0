@@ -31,4 +31,5 @@ void loop() {
     comunicacion.comandos();
     comunicacion.Ax = 10;
     //todo meter los futuros void de los archivos con cada función
+    //todo checar como acomodar todo la neta
 }
