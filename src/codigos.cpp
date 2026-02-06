@@ -8,6 +8,11 @@
 using namespace N;
 using namespace std;
 codigos::codigos() {};
+int sum;
+void codigos::girosvariable() {
+    sum = gyro.ax + gyro.ay + gyro.az;
+}
+
 
 void codigos::comandos() {
         Serial.println(comando.code);
@@ -15,6 +20,10 @@ void codigos::comandos() {
             comando.counter = 1;
         }
 
+        if (sum == 0) {
+            comando.counter = 2;
+            comando.code = 0002;
+        }
 
         switch (comando.counter) {
             case 1:
@@ -26,6 +35,12 @@ void codigos::comandos() {
                 break;
 
             case 2:
+                comando.text = "problemas en giroscopio";
+                Serial.println(comando.text.data());
+                Serial.println("favor de revisar computadora");
+                break;
+
+            case 3:
                 break;
 
             default:
@@ -38,6 +53,4 @@ void codigos::comandos() {
         //todo meter todos los casos y codigos posibles
 }
 
-void codigos::girosvariable() {
-    gyro.ax;
-}
+
