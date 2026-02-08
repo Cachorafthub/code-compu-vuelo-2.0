@@ -1,7 +1,5 @@
 //declaración de librerias
 #include <../include/Adafruit_BMP085.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
 #include <Arduino.h>
 #include <../include/codigos.h>
 #include <SPI.h>
@@ -11,6 +9,7 @@
 #include "../include/MPU6050.h"
 #include "SD.h"
 #include "Wire.h"
+
 using namespace N;
 codigos comunicacion;
 MPU6050 mpu;
