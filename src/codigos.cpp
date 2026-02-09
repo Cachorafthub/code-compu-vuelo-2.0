@@ -5,12 +5,18 @@
 #include "../include/codigos.h"
 #include <iostream>
 #include <string>
+#include "giroscopio.h"
 using namespace N;
+using namespace G;
 using namespace std;
 codigos::codigos() {};
-int sum;
-void codigos::girosvariable() {
-    sum = gyro.ax + gyro.ay + gyro.az;
+giroscopio giro;
+float sum;
+float sum2;
+
+void codigos::girosvariable(){
+    sum = giro.Gx + giro.Gy + giro.Gz;
+    sum2 = giro.Ax + giro.Ay + giro.Az;
 }
 
 

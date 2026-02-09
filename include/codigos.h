@@ -9,23 +9,15 @@ using namespace std;
 namespace N {
     class codigos {
         public:
-        codigos();
-        struct {
-            int code = 0000;
-            int counter;
-            string text;
-        } comando;
+            codigos();
+            struct {
+                int code = 0000;
+                int counter;
+                string text;
+            } comando;
             void comandos();
-        struct {
-            int16_t ax;
-            int ay;
-            int az;
-        } gyro;
             void girosvariable();
-        int16_t &Ax = gyro.ax;
+
     };
-
-
-
 }
 #endif //CODE_COMPU_VUELO_2_0_COMMANDS_H
