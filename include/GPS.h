@@ -15,6 +15,8 @@ namespace P {
             String locationlon;
         }coordenadas;
         void posicion();
+        String &lat = coordenadas.locationlat;
+        String &lon = coordenadas.locationlon;
     };
 }
 #endif //CODE_COMPU_VUELO_2_0_GPS_H
