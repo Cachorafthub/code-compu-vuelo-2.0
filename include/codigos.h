@@ -17,6 +17,8 @@ namespace N {
             } comando;
             void comandos();
             void girosvariable();
+            string texto = comando.text;
+
 
     };
 }

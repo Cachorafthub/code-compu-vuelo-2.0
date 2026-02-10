@@ -31,6 +31,16 @@ void codigos::comandos() {
             comando.code = 0002;
         }
 
+        if (sum2 == 0) {
+            comando.counter = 3;
+            comando.code = 0003;
+        }
+
+        if (sum == 0 && sum2 == 0) {
+            comando.counter = 4;
+            comando.code = 0004;
+        }
+
         switch (comando.counter) {
             case 1:
                 comando.text = "Idling";
@@ -47,6 +57,15 @@ void codigos::comandos() {
                 break;
 
             case 3:
+                comando.text = "problemas en acelerometro";
+                Serial.println(comando.text.data());
+                Serial.println("favor de revisar computadora");
+                break;
+
+            case 4:
+                comando.text = "problemas en acelerometro y giroscopio";
+                Serial.println(comando.text.data());
+                Serial.println("favor de revisar computadora");
                 break;
 
             default:

@@ -29,3 +29,5 @@ void giroscopio::gyroscope() {
     delay(100);
 }
 
+//todo checar si todo funciona
+

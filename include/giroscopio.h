@@ -39,9 +39,4 @@ namespace G {
             float &Az = orientacion.Az;
     };
 }
-
-
-
-
-
 #endif //CODE_COMPU_VUELO_2_0_GIROSCOPIO_H
