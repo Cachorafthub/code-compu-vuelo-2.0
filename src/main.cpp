@@ -19,7 +19,7 @@ using namespace B;
 codigos comunicacion;
 MPU6050 mpu;
 giroscopio giro;
-GPS gps;
+GPS gpss;
 barometro bar;
 
 void setup() {
@@ -38,7 +38,7 @@ void loop() {
     Serial.print(comunicacion.texto.data());
     comunicacion.comandos();
     giro.gyroscope();
-    gps.posicion();
+    gpss.posicion();
     bar.baro();
     //todo meter los futuros void de los archivos con cada función
     //todo checar como acomodar todo la neta
