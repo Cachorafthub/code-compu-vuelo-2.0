@@ -6,7 +6,7 @@
 #include "tinyGPSPlus.h"
 using namespace std;
 using namespace P;
-
+TinyGPSPlus gps;
 GPS::GPS() {};
 
 void GPS::posicion() {
@@ -14,6 +14,6 @@ void GPS::posicion() {
 
     while (millis() - start < 1000) {
         coordenadas.locationlat = String(gps.location.lat(), 6);
-        coordenadas.locationlon = String(gps.location.lon(), 6);
+        coordenadas.locationlon = String(gps.location.lng(), 6);
     }
 }

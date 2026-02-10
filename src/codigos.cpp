@@ -10,13 +10,13 @@ using namespace N;
 using namespace G;
 using namespace std;
 codigos::codigos() {};
-giroscopio giro;
+giroscopio giros;
 float sum;
 float sum2;
 
 void codigos::girosvariable(){
-    sum = giro.Gx + giro.Gy + giro.Gz;
-    sum2 = giro.Ax + giro.Ay + giro.Az;
+    sum = giros.Gx + giros.Gy + giros.Gz;
+    sum2 = giros.Ax + giros.Ay + giros.Az;
 }
 
 
