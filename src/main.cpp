@@ -41,5 +41,5 @@ void loop() {
     gpss.posicion();
     bar.baro();
     //todo meter los futuros void de los archivos con cada función
-    //todo checar como acomodar todo la neta
+    //todo checar como acomodar todo la netaaaaa
 }
