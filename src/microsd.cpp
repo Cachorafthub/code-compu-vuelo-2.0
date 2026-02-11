@@ -58,4 +58,4 @@ void microsd::guardado() {
     appendFile(SD, "/sensorinfo.txt", microsd::message.c_str());
 }
 
-//todo transmisor
+//todo transmisor a
