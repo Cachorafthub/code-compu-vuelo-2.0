@@ -1,0 +1,18 @@
+//
+// Created by David Aaron Ojeda Camacho on 10/02/26.
+//
+
+#ifndef CODE_COMPU_VUELO_2_0_MICROSD_H
+#define CODE_COMPU_VUELO_2_0_MICROSD_H
+#include <arduino.h>
+namespace M {
+    class microsd {
+    public:
+        microsd();
+        String message;
+        void guardado();
+    };
+}
+
+
+#endif //CODE_COMPU_VUELO_2_0_MICROSD_H
