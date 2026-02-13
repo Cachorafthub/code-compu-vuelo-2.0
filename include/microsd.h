@@ -11,6 +11,11 @@ namespace M {
         microsd();
         String message;
         void guardado();
+        void contador();
+        struct {
+           float segundos = 0;
+        }tiempo;
+        void archivo();
     };
 }
 

@@ -16,7 +16,29 @@ using namespace B;
 microsd::microsd() {};
 giroscopio gyros;
 GPS posicion;
-barometro barom;
+barometro baromet;
+#define SD_CS 5
+void microsd::contador() {
+    tiempo.segundos = tiempo.segundos+.5; //contador de segundos
+    delay(500);
+}
+
+    void appendfile(fs::FS &fs, const char * path, const char * message){
+        Serial.printf("Appending to file: %s\n", path);
+        File file = fs.open(path, FILE_APPEND);
+        if(!file) {
+            Serial.println("Failed to open file for appending");
+            return;
+        }
+        if(file.print(message)) {
+            Serial.println("Message appended");
+        } else {
+            Serial.println("Append failed");
+        }
+        file.close();
+    }
+
+
 void writeFile(fs::FS &fs, const char * path, const char * message) {
     Serial.printf("Writing file: %s\n", path);
     File file = fs.open(path, FILE_WRITE);
@@ -32,30 +54,43 @@ void writeFile(fs::FS &fs, const char * path, const char * message) {
     file.close();
 }
 
-void appendFile(fs::FS &fs, const char * path, const char * message) {
-    Serial.printf("Appending to file: %s\n", path);
-    File file = fs.open(path, FILE_APPEND);
-    if(!file) {
-        Serial.println("Failed to open file for appending");
+void microsd::archivo() {
+    SD.begin(SD_CS);
+    if(!SD.begin(SD_CS)) {
+        Serial.println("Card Mount Failed");
         return;
     }
-    if(file.print(message)) {
-        Serial.println("Message appended");
-    } else {
-        Serial.println("Append failed");
+    uint8_t cardType = SD.cardType();
+    if(cardType == CARD_NONE) {
+        Serial.println("No SD card attached");
+        return;
+    }
+    Serial.println("Initializing SD card...");
+    if (!SD.begin(SD_CS)) {
+        Serial.println("ERROR - SD card initialization failed!");
+        return;    // init failed
+    }
+    //crear archivo de datos en la micro sd
+    File file = SD.open("/data.txt");
+    if(!file) {
+        Serial.println("File doens't exist");
+        Serial.println("Creating file...");
+        writeFile(SD, "/sensorinfo.txt", "segundos, aceleraciónx, aceleracióny, aceleraciónz, posiciónx, posicióny, posiciónz, latitud, longitud, temperatura, altitud, presion,  \r\n");
+    }
+    else {
+        Serial.println("File already exists");
     }
     file.close();
 }
 
-
 void microsd::guardado() {
-    microsd::message = String(gyros.Ax) + "Ax" + String(gyros.Ay) + "Ay" + String(gyros.Az)
-        + "Az" + String(gyros.Gx) + "Gx" + String(gyros.Gy) + "Gy" + String(gyros.Gz) + "Gz" +
-        String(posicion.lat) + "lat" + String(posicion.lon) + "lon" + String(barom.temp) +
-            "temp" + String(barom.altitude) + "altitude" + String(barom.press) + "press" + "\r\n";
+    microsd::message = String(tiempo.segundos) + "seg" + String(gyros.Ax) + "Ax" + String(gyros.Ay) + "Ay" +
+        String(gyros.Az) + "Az" + String(gyros.Gx) + "Gx" + String(gyros.Gy) + "Gy" + String(gyros.Gz) + "Gz" +
+        String(posicion.lat) + "lat" + String(posicion.lon) + "lon" + String(baromet.temp) +
+            "temp" + String(baromet.altitude) + "altitude" + String(baromet.press) + "press" + "\r\n";
     Serial.print("Save data: ");
     Serial.println(microsd::message);
-    appendFile(SD, "/sensorinfo.txt", microsd::message.c_str());
+    appendfile(SD, "/sensorinfo.txt", microsd::message.c_str());
 }
 
 //todo transmisor a
