@@ -62,14 +62,14 @@ void setup() {
 }
 
 void loop() {
-    Serial.print("Codigo: ");
-    Serial.print(comunicacion.texto.data());
     micr.contador();
     comunicacion.comandos();
     giro.gyroscope();
     gpss.posicion();
     bar.baro();
     micr.guardado();
-    //todo meter los futuros void de los archivos con cada función
-    //todo checar como acomodar todo la netaaaaa
+    Serial.print("Codigo: ");
+    Serial.println(comunicacion.texto.data());
+    Serial.print("Ax coso: ");
+    Serial.println(giro.Ax);
 }
