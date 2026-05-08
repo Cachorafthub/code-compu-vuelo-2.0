@@ -6,7 +6,6 @@
 #include <SD.h>
 #include "microsd.h"
 #include "giroscopio.h"
-#include "codigos.h"
 #include "GPS.h"
 #include "barometro.h"
 using namespace M;

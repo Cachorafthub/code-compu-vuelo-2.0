@@ -2,12 +2,7 @@
 #include <../include/Adafruit_BMP085.h>
 #include <Arduino.h>
 #include <../include/codigos.h>
-#include <SPI.h>
-#include <../include/TinyGPSPlus.h>
-#include "FS.h"
-#include "../include/I2Cdev.h"
 #include "../include/MPU6050.h"
-#include "SD.h"
 #include "Wire.h"
 #include "giroscopio.h"
 #include "GPS.h"
