@@ -5,7 +5,6 @@
 #ifndef CODE_COMPU_VUELO_2_0_GPS_H
 #define CODE_COMPU_VUELO_2_0_GPS_H
 #include <arduino.h>
-using namespace std;
 namespace P {
     class GPS {
     public:

@@ -6,7 +6,6 @@
 #include "Adafruit_BMP085.h"
 #include "barometro.h"
 using namespace B;
-using namespace std;
 Adafruit_BMP085 bmp;
 barometro::barometro() {};
 

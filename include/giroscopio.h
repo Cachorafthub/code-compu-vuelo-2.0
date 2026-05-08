@@ -4,8 +4,6 @@
 
 #ifndef CODE_COMPU_VUELO_2_0_GIROSCOPIO_H
 #define CODE_COMPU_VUELO_2_0_GIROSCOPIO_H
-#include <string>
-using namespace std;
 namespace G {
     class giroscopio {
         public:

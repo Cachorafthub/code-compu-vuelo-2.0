@@ -6,7 +6,6 @@
 #include <iostream>
 #include "MPU6050.h"
 using namespace G;
-using namespace std;
 giroscopio::giroscopio() {};
 MPU6050 sensor;
 void giroscopio::giros() {

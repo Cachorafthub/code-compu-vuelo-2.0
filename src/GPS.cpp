@@ -4,7 +4,6 @@
 #include <arduino.h>
 #include "GPS.h"
 #include "tinyGPSPlus.h"
-using namespace std;
 using namespace P;
 TinyGPSPlus gps;
 GPS::GPS() {};

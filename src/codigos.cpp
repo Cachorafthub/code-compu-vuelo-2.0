@@ -8,7 +8,6 @@
 #include "giroscopio.h"
 using namespace N;
 using namespace G;
-using namespace std;
 codigos::codigos() {};
 giroscopio giros;
 float sum;
