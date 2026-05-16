@@ -5,7 +5,6 @@
 #ifndef CODE_COMPU_VUELO_2_0_MICROSD_H
 #define CODE_COMPU_VUELO_2_0_MICROSD_H
 #include <Arduino.h>
-namespace M {
     class microsd {
     public:
         microsd();
@@ -17,7 +16,6 @@ namespace M {
         }tiempo;
         void archivo();
     };
-}
 
 
 #endif //CODE_COMPU_VUELO_2_0_MICROSD_H

@@ -5,7 +5,6 @@
 #ifndef CODE_COMPU_VUELO_2_0_COMMANDS_H
 #define CODE_COMPU_VUELO_2_0_COMMANDS_H
 #include <string>
-namespace N {
     class codigos {
         public:
             codigos();
@@ -18,5 +17,4 @@ namespace N {
             void girosvariable();
             std::string texto = comando.text;
     };
-}
 #endif //CODE_COMPU_VUELO_2_0_COMMANDS_H

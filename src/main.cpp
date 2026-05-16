@@ -8,11 +8,7 @@
 #include "GPS.h"
 #include "barometro.h"
 #include "microsd.h"
-using namespace G;
-using namespace N;
-using namespace P;
-using namespace B;
-using namespace M;
+//Declaración de constructores de clase
 codigos comunicacion;
 MPU6050 mpu;
 giroscopio giro;
@@ -20,6 +16,7 @@ GPS gpss;
 barometro bar;
 Adafruit_BMP085 barom;
 microsd micr;
+//Definición de pines
 #define SD_CS 5
 #define RXD2 16
 #define TXD2 17

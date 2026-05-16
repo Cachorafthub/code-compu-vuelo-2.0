@@ -5,8 +5,7 @@
 #include "giroscopio.h"
 #include <iostream>
 #include "MPU6050.h"
-using namespace G;
-giroscopio::giroscopio() {};
+giroscopio::giroscopio(){};
 MPU6050 sensor;
 void giroscopio::giros() {
     sensor.getRotation(&gyro.Gx, &gyro.Gy, &gyro.Gz);

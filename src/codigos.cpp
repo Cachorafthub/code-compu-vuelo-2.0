@@ -6,8 +6,6 @@
 #include <iostream>
 #include <string>
 #include "giroscopio.h"
-using namespace N;
-using namespace G;
 codigos::codigos() {};
 giroscopio giros;
 float sum;

@@ -5,7 +5,6 @@
 #ifndef CODE_COMPU_VUELO_2_0_GPS_H
 #define CODE_COMPU_VUELO_2_0_GPS_H
 #include <arduino.h>
-namespace P {
     class GPS {
     public:
         GPS();
@@ -17,5 +16,5 @@ namespace P {
         String &lat = coordenadas.locationlat;
         String &lon = coordenadas.locationlon;
     };
-}
+
 #endif //CODE_COMPU_VUELO_2_0_GPS_H

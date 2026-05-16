@@ -8,10 +8,6 @@
 #include "giroscopio.h"
 #include "GPS.h"
 #include "barometro.h"
-using namespace M;
-using namespace G;
-using namespace P;
-using namespace B;
 microsd::microsd() {};
 giroscopio gyros;
 GPS posicion;
