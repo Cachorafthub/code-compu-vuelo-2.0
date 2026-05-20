@@ -65,3 +65,9 @@ void loop() {
     Serial.print("Ax coso: ");
     Serial.println(giro.Ax);
 }
+
+//todo implementar el sistema de codigos
+//todo implementar oop en las clases
+//todo migrar de framework
+//todo documentar todo
+//todo cambiar de board en el futuro o microcontrolador
