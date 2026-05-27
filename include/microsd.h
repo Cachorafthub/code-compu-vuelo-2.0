@@ -12,7 +12,7 @@
         void guardado();
         void contador();
         struct {
-           float segundos = 0;
+            float segundos = 0;
         }tiempo;
         void archivo();
     };

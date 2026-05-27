@@ -72,7 +72,7 @@ void codigos::comandos() {
                         "favor de revisar la computadora en busca del algun error ");
                 }
         }
-        //todo meter todos los casos y codigos posibles
+        //todo hacer algo con este codigo y poner casos
 }
 
 
