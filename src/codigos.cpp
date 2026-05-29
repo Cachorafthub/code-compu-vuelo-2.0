@@ -73,6 +73,8 @@ void codigos::comandos() {
                 }
         }
         //todo hacer algo con este codigo y poner casos
+        //todo cambiar los codigos a if not casos
+
 }
 
 
