@@ -64,6 +64,7 @@ void loop() {
     Serial.println(comunicacion.texto.data());
     Serial.print("Ax coso: ");
     Serial.println(giro.Ax);
+    delay(100);
 }
 
 //todo implementar el sistema de codigos

@@ -14,7 +14,7 @@ void giroscopio::giros() {
     orientacion.Gz = gyro.Gz * (250.0/32768.0);
 }
 
-void giroscopio::acelerometro() {
+void giroscopio::acelerometer() {
     sensor.getAcceleration(&acc.Ax, &acc.Ay, &acc.Az);
     orientacion.Ax = acc.Ax * (9.81/16384.0);
     orientacion.Ay = acc.Ay * (9.81/16384.0);
@@ -24,6 +24,5 @@ void giroscopio::acelerometro() {
 void giroscopio::gyroscope() {
     giros();
     acelerometro();
-    delay(100);
 }
 

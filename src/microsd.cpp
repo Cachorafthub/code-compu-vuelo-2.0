@@ -2,7 +2,7 @@
 // Created by David Aaron Ojeda Camacho on 10/02/26.
 //
 #include <Arduino.h>
-#include  <FS.h>
+#include <FS.h>
 #include <SD.h>
 #include "microsd.h"
 #include "giroscopio.h"

@@ -12,6 +12,7 @@
                 int code = 0000;
                 int counter;
                 std::string text;
+                float contador[9];
             } comando;
             void comandos();
             void girosvariable();

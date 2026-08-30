@@ -10,11 +10,19 @@ codigos::codigos() {};
 giroscopio giros;
 float sum;
 float sum2;
-
+float* suma = nullptr;
 void codigos::girosvariable(){
     sum = giros.Gx + giros.Gy + giros.Gz;
     sum2 = giros.Ax + giros.Ay + giros.Az;
+    float *suma = &sum;
+    for (float & i : comando.contador) {
+        i;
+    }
 }
+
+ auto gir []() {
+        
+ }
 
 
 void codigos::comandos() {
