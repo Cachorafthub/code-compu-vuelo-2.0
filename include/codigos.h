@@ -22,4 +22,4 @@
     };
 #endif //CODE_COMPU_VUELO_2_0_COMMANDS_H
 
-//todo tambien actualizar esto si  me da la gana al chile
+//todo tambien actualizar esto si  me da la gana al chilea
