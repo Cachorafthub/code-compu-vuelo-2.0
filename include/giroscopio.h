@@ -33,15 +33,13 @@
                 float Ay;
                 float Az;
             }orientacion;
-            //Por si te confundes esto es lo del GPS
-        private:
+            //Por si te confundes esto es lo de la microsd
             float &Gx = orientacion.Gx;
             float &Gy = orientacion.Gy;
             float &Gz = orientacion.Gz;
             float &Ax = orientacion.Ax;
             float &Ay = orientacion.Ay;
             float &Az = orientacion.Az;
-            String(Gx);
     };
         //continua mañana que me dio hueva
 

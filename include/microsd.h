@@ -15,6 +15,8 @@
             float segundos = 0;
         }tiempo;
         void archivo();
+    private:
+        float referencia = 0.5;
     };
 
 

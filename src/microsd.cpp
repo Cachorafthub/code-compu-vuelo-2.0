@@ -14,7 +14,7 @@ GPS posicion;
 barometro baromet;
 #define SD_CS 5
 void microsd::contador() {
-    tiempo.segundos = tiempo.segundos+.5; //contador de segundos
+    tiempo.segundos = tiempo.segundos+referencia; //contador de segundos
     delay(500);
 }
 

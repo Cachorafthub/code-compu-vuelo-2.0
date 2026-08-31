@@ -20,9 +20,6 @@ void codigos::girosvariable(){
     }
 }
 
- auto gir []() {
-        
- }
 
 
 void codigos::comandos() {
